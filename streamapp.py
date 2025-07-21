@@ -8,10 +8,10 @@ import os
 # 加载模型
 st.title('Survival Prediction for MSA Patients')
 # 设置页面配置
-model = joblib.load('modelapplication/rsf_model.pkl')
+model = joblib.load('rsf_model.pkl')
 feature_names = joblib.load("feature_names.pkl")
 # 训练集（用于 SHAP 背景）
-file_path = r'C:\\Users\\dong\\Desktop\\train111.csv'
+file_path = 'train111.csv'
 X_train = pd.read_csv(file_path)
 X_train = X_train.drop(columns=["time", "event"])
 background_data = X_train.sample(n=min(50, len(X_train)), random_state=42)
