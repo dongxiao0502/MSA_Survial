@@ -132,7 +132,7 @@ if submit_button:
    
     with st.expander("Model Explanation"):
     # 你可以展示模型的更多信息，如超参数、模型配置等
-        svg_path = r"C:\Users\dong\modelapplication\images\model_architecture.svg"
+        svg_path = "model_architecture.svg"
         with open(svg_path, "r", encoding="utf-8") as file:
             svg_content = file.read()
         st.markdown(f"<div>{svg_content}</div>", unsafe_allow_html=True)
